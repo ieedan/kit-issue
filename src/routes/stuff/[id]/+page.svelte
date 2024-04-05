@@ -1,17 +1,17 @@
 <script lang="ts">
-    export let data;
+	export let data;
 
-    let name = data.thing?.name;
+	let name = data.thing?.name;
 </script>
 
 <h1>{data.thing?.name}</h1>
 <h1>Name State: {name}</h1>
 <ul>
-    {#each data.things as thing (thing.id)}
+	{#each data.things as thing (thing.id)}
 		<li>
-            <a href="/stuff/{thing.id}">
-                {thing.name}
-            </a>
-        </li>
+			<a href="/stuff/{thing.id}">
+				{thing.name}
+			</a>
+		</li>
 	{/each}
 </ul>
